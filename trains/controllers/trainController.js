@@ -35,6 +35,7 @@ const handleGetTrains = async(req, res)=>{
 
     const currentTime = new Date();
 
+    
     const filteredTrains0 = apiResponse.data.filter(item => !(parseInt(item.departureTime.Hours) === 0 &&  parseInt(item.departureTime.Minutes) < 30));
     const filteredTrains =  filteredTrains0.filter(item => parseInt(item.departureTime.Hours) < 12);
 
